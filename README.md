@@ -32,6 +32,10 @@ The goal is to reproduce the full process described in Chapter 7 of *Robotics: M
   pip install mujoco mujoco-python-viewer numpy matplotlib
 
 
+## 🚀 How to Run
 
-  🚀 How to Run
 1. Open and Verify the Model
+  ```bash
+  python3 -m mujoco.viewer three_link_pendulum_vertical.xml
+
+Ensure the arm hangs vertically and moves in the x–z plane.
