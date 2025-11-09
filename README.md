@@ -35,7 +35,34 @@ The goal is to reproduce the full process described in Chapter 7 of *Robotics: M
 ## 🚀 How to Run
 
 1. Open and Verify the Model
-  ```bash
-  python3 -m mujoco.viewer three_link_pendulum_vertical.xml
-
+    ```bash
+    python3 -m mujoco.viewer three_link_pendulum_vertical.xml
 Ensure the arm hangs vertically and moves in the x–z plane.
+
+2. Generate the Trajectory
+   ```bash
+   python3 trajectory_test.py
+Runs the multi-sine motion to verify joint limits and smoothness.
+
+4. Estimate Parameters
+   ```bash
+    python3 estimate_params.py
+Outputs: identified_params.csv
+Prints parameter estimates and joint RMSE.
+
+5. Validate Results
+   ```bash
+   python3 plot_check.py
+Shows torque comparison plots and prints regressor conditioning.
+
+## 📊 Results Summary
+
+RMSE per joint: [0.019, 0.014, 0.009] Nm
+
+Condition number: 33.5 (well-conditioned trajectory)
+
+Identified parameters match MJCF truth within 0.1–0.3%.
+
+Measured vs predicted torques overlap perfectly.
+
+
