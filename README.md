@@ -30,3 +30,8 @@ The goal is to reproduce the full process described in Chapter 7 of *Robotics: M
 - Packages:
   ```bash
   pip install mujoco mujoco-python-viewer numpy matplotlib
+
+
+
+  🚀 How to Run
+1. Open and Verify the Model
